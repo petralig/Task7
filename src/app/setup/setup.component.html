@@ -1,0 +1,39 @@
+<!--<label>
+  Enter bus stop number or name
+  <input type="text" [(ngModel)]="stop">
+</label>
+<button (click)="setStop()">Search</button>
+<br />
+-->
+
+<form #prefForm="ngForm" (ngSubmit)="setPreferences(prefForm.value)">
+  <p>
+    <label>Enter bus stop number or name:</label>
+    <input type="text" name="stop" ngModel value="stop">
+  </p>
+  <p>
+    <label>Name:</label>
+  <input type="text" name="name" ngModel>
+  </p>
+    <p>
+  <label>Address:</label>
+  <input type="text" name="address" ngModel>
+    </p>
+    <p>
+  <label>City:</label>
+  <input type="text" name="city" ngModel>
+    </p>
+    <p>
+  <label>Phone:</label>
+  <input type="text" name="phone" ngModel>
+    </p>
+  <button type="submit">Submit</button>
+</form>
+
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/MODE?key=AIzaSyCbh-kiQs59r8Lse1FiiaXFCMeRSoxPjQ8&parameters
+" allowfullscreen>
+</iframe>
